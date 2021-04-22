@@ -15,9 +15,9 @@ class Loja:
 
         if resultado:
             self.caixa += valor_compra
-            print("Compra efetuada com sucesso!")
+            return "Compra efetuada com sucesso!"
         else:
-            print("Compra efetuada com fracasso!")
+            return "Compra efetuada com fracasso!"
 
     def solicitar_boleto(self, dados_compra: dict):
         dados_requisicao = dict(conta_loja=self.conta_loja,

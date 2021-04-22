@@ -57,11 +57,11 @@ class TestBanco(TestCase):
         self.assertFalse(resultado_falso)
 
 
-    # def test_gerar_boleto_is_working(self):
-    #     dados = dict(valor=0.0, data=0000, codigo="123", conta_loja="000124578")
-    #     dados_esperados = {"valor": 0.0,"data_validade": 0000,"código": "123", "conta_loja": "000124578"}
-    #     resultado = Banco().gerar_boleto(dados)
-    #     self.assertDictEqual(resultado, dados_esperados)
+    def test_gerar_boleto_is_working(self):
+        dados = dict(valor=0.0, data=0000, codigo="123", conta_loja="000124578")
+        dados_esperados = dict(valor=0.0, data_validade=3, código="123", conta_recebedora="000124578")
+        resultado = Banco().gerar_boleto(dados)
+        self.assertDictEqual(resultado, dados_esperados)
 
 
     @mock.patch("funcoes.banco.Banco")

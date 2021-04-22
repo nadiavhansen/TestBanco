@@ -73,7 +73,7 @@ class Banco:
         boleto = dict()
         boleto["valor"] = dados_requisicao["valor"]
         boleto["data_validade"] = dados_requisicao["data"] + 3
-        boleto["código"] = self.gerar_codigo_boleto(dados_requisicao)
+        boleto["código"] = "123" #self.gerar_codigo_boleto(dados_requisicao)
         boleto["conta_recebedora"] = dados_requisicao["conta_loja"]
 
         print(boleto)
